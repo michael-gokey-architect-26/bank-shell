@@ -1,0 +1,34 @@
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="brand" routerLink="/" aria-label="Bank Shell home">
+      <span class="brand__mark" aria-hidden="true">B</span>
+      <span>
+        <strong>Bank Shell</strong>
+        <small>Enterprise Banking</small>
+      </span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        @for (item of navigation; track item.route) {
+          <li>
+            <a
+              [routerLink]="item.route"
+              routerLinkActive="nav-link--active"
+              [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+              class="nav-link"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <button class="profile" type="button" aria-label="Open user profile">
+      <span aria-hidden="true">MG</span>
+    </button>
+  </div>
+</header>
