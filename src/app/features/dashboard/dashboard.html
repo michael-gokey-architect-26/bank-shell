@@ -1,0 +1,44 @@
+<section class="hero" aria-labelledby="page-title">
+  <p class="eyebrow">Application Shell</p>
+  <h1 id="page-title">One banking experience. Independently owned capabilities.</h1>
+  <p class="hero__copy">
+    The shell owns navigation, security boundaries, shared experience standards,
+    and application composition. Banking domains remain independently evolvable.
+  </p>
+</section>
+
+<section aria-labelledby="capabilities-title">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Capability boundaries</p>
+      <h2 id="capabilities-title">Banking domains</h2>
+    </div>
+    <span class="status">Foundation milestone</span>
+  </div>
+
+  <div class="capability-grid">
+    @for (capability of capabilities; track capability.route) {
+      <article class="capability-card">
+        <p class="capability-card__owner">{{ capability.ownership }}</p>
+        <h3>{{ capability.name }}</h3>
+        <p>{{ capability.description }}</p>
+        <a [routerLink]="capability.route">
+          View capability
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="principle" aria-labelledby="principle-title">
+  <div>
+    <p class="eyebrow">Architectural guardrail</p>
+    <h2 id="principle-title">Keep the shell thin.</h2>
+  </div>
+  <p>
+    If a rule exists because of accounts, payments, or transfers, that rule should
+    normally live with that domain. The shell coordinates the experience; it does
+    not become the owner of every business decision.
+  </p>
+</section>
