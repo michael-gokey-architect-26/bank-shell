@@ -1,0 +1,17 @@
+<div class="shell">
+  <app-shell-header />
+
+  <!--
+    The main landmark gives keyboard and assistive-technology users a predictable
+    destination for page content. Routed applications should preserve these
+    document-level semantics even while the content inside changes dynamically.
+  -->
+  <main id="main-content" class="shell__content" tabindex="-1">
+    <router-outlet />
+  </main>
+
+  <footer class="shell__footer">
+    <span>Bank Shell</span>
+    <span>Angular enterprise UI architecture reference</span>
+  </footer>
+</div>
